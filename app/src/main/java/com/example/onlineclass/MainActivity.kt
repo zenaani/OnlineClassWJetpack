@@ -1,9 +1,11 @@
 package com.example.onlineclass
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageButton
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.animation.expandHorizontally
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -35,12 +37,156 @@ class MainActivity : ComponentActivity() {
                     Greeting("Android")
                 }
 
+                Background()
+
+                Column {
+
+                    Box(modifier = Modifier
+                        .weight(0.1f)
+                        .fillMaxSize()
+                    ) {
+                        Text(text = "Hello World")
+                    }
 
 
+
+
+                    Box(modifier = Modifier
+                        .fillMaxSize()
+                        .weight(0.9f)
+                        .padding(25.dp, 25.dp, 25.dp, 0.dp)
+                        .background(color = Color.Green)
+                    ) {
+
+                        Column() {
+
+                            Row {
+
+                                CircleLink()
+                                Spacer(modifier = Modifier.padding(8.dp))
+
+                                CircleLink()
+                                Spacer(modifier = Modifier.padding(8.dp))
+
+                                CircleLink()
+                                Spacer(modifier = Modifier.padding(8.dp))
+
+                                CircleLink()
+                                Spacer(modifier = Modifier.padding(8.dp))
+
+                                CircleLink()
+                                Spacer(modifier = Modifier.padding(8.dp))
+
+                            }
+
+                            Spacer(modifier = Modifier.padding(12.dp))
+
+                            Card(modifier = Modifier
+                                .fillMaxSize(),
+                                shape = RoundedCornerShape(25.dp,25.dp,0.dp,0.dp)
+                            ) {
+
+                                Background()
+
+                                Box(modifier = Modifier
+                                    .fillMaxSize(0.2f)
+                                    .padding(25.dp)) {
+
+                                    Column() {
+
+                                        Box(modifier = Modifier
+                                            .fillMaxSize()
+                                            .weight(0.2f)
+
+                                        ) {
+                                            Card(modifier = Modifier
+                                                .fillMaxSize()
+                                                .padding(12.dp),
+                                                shape = RoundedCornerShape(25.dp)) {
+                                                IconButton(
+                                                    onClick = { this@MainActivity.startActivity(
+                                                        Intent(this@MainActivity, MondayActivity::class.java)) }, modifier = Modifier.fillMaxSize() ) {
+                                                    Image(painter = painterResource(id = R.drawable.sample), contentDescription = "Sample", contentScale = ContentScale.Crop)
+                                                    Text(text = "Monday", modifier = Modifier, fontSize = 66.sp, color = Color.Black)
+                                                }
+                                            }
+                                        }
+
+                                        Box(modifier = Modifier
+                                            .fillMaxSize()
+                                            .weight(0.2f)
+                                        ) {
+                                            Card(modifier = Modifier
+                                                .fillMaxSize()
+                                                .padding(12.dp),
+                                                shape = RoundedCornerShape(25.dp)
+                                            ) {
+                                                IconButton(onClick = { /*TODO*/ }, modifier = Modifier.fillMaxSize() ) {
+                                                    Image(painter = painterResource(id = R.drawable.sample), contentDescription = "Sample", contentScale = ContentScale.Crop)
+                                                    Text(text = "Monday", modifier = Modifier, fontSize = 66.sp, color = Color.Black)
+                                                }
+                                            }
+                                        }
+
+                                        Box(modifier = Modifier
+                                            .fillMaxSize()
+                                            .weight(0.2f)
+                                        ) {
+                                            Card(modifier = Modifier
+                                                .fillMaxSize()
+                                                .padding(12.dp),
+                                                shape = RoundedCornerShape(25.dp)
+                                            ) {
+                                                IconButton(onClick = { /*TODO*/ }, modifier = Modifier.fillMaxSize() ) {
+                                                    Image(painter = painterResource(id = R.drawable.sample), contentDescription = "Sample", contentScale = ContentScale.Crop)
+                                                    Text(text = "Monday", modifier = Modifier, fontSize = 66.sp, color = Color.Black)
+                                                }
+                                            }
+                                        }
+
+                                        Box(modifier = Modifier
+                                            .fillMaxSize()
+                                            .weight(0.2f)
+                                        ) {
+                                            Card(modifier = Modifier
+                                                .fillMaxSize()
+                                                .padding(12.dp),
+                                                shape = RoundedCornerShape(25.dp)
+                                            ) {
+                                                IconButton(onClick = { /*TODO*/ }, modifier = Modifier.fillMaxSize() ) {
+                                                    Image(painter = painterResource(id = R.drawable.sample), contentDescription = "Sample", contentScale = ContentScale.Crop)
+                                                    Text(text = "Monday", modifier = Modifier, fontSize = 66.sp, color = Color.Black)
+                                                }
+                                            }
+                                        }
+
+                                        Box(modifier = Modifier
+                                            .fillMaxSize()
+                                            .weight(0.2f)
+                                        ) {
+                                            Card(modifier = Modifier
+                                                .fillMaxSize()
+                                                .padding(12.dp),
+                                                shape = RoundedCornerShape(25.dp)
+                                            ) {
+                                                IconButton(onClick = { /*TODO*/ }, modifier = Modifier.fillMaxSize() ) {
+                                                    Image(painter = painterResource(id = R.drawable.sample), contentDescription = "Sample", contentScale = ContentScale.Crop)
+                                                    Text(text = "Monday", modifier = Modifier, fontSize = 66.sp, color = Color.Black)
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
 }
+
+//187 Lines of Code converted to - __________
 
 @Composable
 fun Greeting(name: String) {
@@ -171,54 +317,69 @@ fun DefaultPreview() {
         Background()
 
         Column {
-
-
+            
             Box(modifier = Modifier
+                .weight(0.1f)
                 .fillMaxSize()
-                .weight(0.2f)
             ) {
-
-                Row() {
-
-                    Box(modifier = Modifier.weight(0.2f)) {
-                        CircleLink()
-                    }
-                    Box(modifier = Modifier.weight(0.2f)) {
-                        CircleLink()
-                    }
-                    Box(modifier = Modifier.weight(0.2f)) {
-                        CircleLink()
-                    }
-                    Box(modifier = Modifier.weight(0.2f)) {
-                        CircleLink()
-                    }
-                }
+                Text(text = "Hello World")
             }
 
 
+
+
             Box(modifier = Modifier
                 .fillMaxSize()
-                .weight(0.8f)
+                .weight(0.9f)
                 .padding(25.dp, 25.dp, 25.dp, 0.dp)
                 .background(color = Color.Green)
             ) {
-                Card(modifier = Modifier
-                    .fillMaxSize(),
-                    shape = RoundedCornerShape(25.dp,25.dp,0.dp,0.dp)
-                ) {
 
-                    Background()
+                Column() {
 
-                    Box(modifier = Modifier
-                        .fillMaxSize(0.2f)
-                        .padding(25.dp)) {
+                    Row {
 
-                        DaysLayout()
+                        CircleLink()
+                        Spacer(modifier = Modifier.padding(8.dp))
 
+                        CircleLink()
+                        Spacer(modifier = Modifier.padding(8.dp))
+
+                        CircleLink()
+                        Spacer(modifier = Modifier.padding(8.dp))
+
+                        CircleLink()
+                        Spacer(modifier = Modifier.padding(8.dp))
+
+                        CircleLink()
+                        Spacer(modifier = Modifier.padding(8.dp))
+
+                    }
+                    
+                    Spacer(modifier = Modifier.padding(12.dp))
+
+
+                    Card(modifier = Modifier
+                        .fillMaxSize(),
+                        shape = RoundedCornerShape(25.dp,25.dp,0.dp,0.dp)
+                    ) {
+
+                        Background()
+
+                        Box(modifier = Modifier
+                            .fillMaxSize(0.2f)
+                            .padding(25.dp)) {
+
+                            DaysLayout()
+
+
+                        }
 
                     }
 
                 }
+
+
             }
             
         }
