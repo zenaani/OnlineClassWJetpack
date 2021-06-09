@@ -1,5 +1,6 @@
 package com.example.onlineclass
 
+import android.nfc.Tag
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.compose.setContent
@@ -28,6 +29,10 @@ class MondayActivity : AppCompatActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
                     Greeting("Android")
+                }
+
+                fun blah() {
+                    print("blah")
                 }
 
                 Row {
@@ -113,7 +118,6 @@ class MondayActivity : AppCompatActivity() {
                                 }
                             }
                         }
-
                     }
 
 
@@ -205,24 +209,9 @@ class MondayActivity : AppCompatActivity() {
     }
 }
 
-/*
-@Composable
-fun NdhoFunc(subject : String, painter: Painter, modifier: Modifier) {
 
-    Card (
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(12.dp),
-        shape = RoundedCornerShape(25.dp)
-            ) {
-        IconButton(onClick = { /*TODO*/ }) {
 
-        }
 
-    }
-
-}
-*/
 
 
 @Preview(showBackground = true)
